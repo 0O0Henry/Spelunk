@@ -156,15 +156,15 @@ function scrEntityGen() {
 	                if (collision_point(x+16, y, oSolid, 0, 0) and not
 	                    collision_rectangle(x-32, y, x-1, y+15, oSolid, 0, 0))
 	                {
-	                    if (global.darkLevel) instance_create(x, y, oArrowTrapLeftLit);
-	                    else instance_create(x, y, oArrowTrapLeft);
+	                    if (global.darkLevel) instance_create(x, y, oEmeraldBig);
+	                    else instance_create(x, y, oEmeraldBig);
 	                    instance_destroy();
 	                }
 	                else if (collision_point(x-16, y, oSolid, 0, 0) and not
 	                    collision_rectangle(x+16, y, x+48, y+15, oSolid, 0, 0))
 	                {
-	                    if (global.darkLevel) instance_create(x, y, oArrowTrapRightLit);
-	                    else instance_create(x, y, oArrowTrapRight);
+	                    if (global.darkLevel) instance_create(x, y, oEmeraldBig);
+	                    else instance_create(x, y, oEmeraldBig);
 	                    instance_destroy();
 	                }
 	            }
@@ -271,7 +271,7 @@ function scrEntityGen() {
                 
 	                if (global.darkLevel and rand(1,40) == 1) instance_create(x, y+16, oScarab);
 	                else if (rand(1,n) == 1) instance_create(x, y+16, oBat);
-	                // else if (rand(1,40) == 1) instance_create(x, y+16, oSpiderHang);
+	                // else if (rand(1,40) == 1) instance_create(x, y+16, oEmeraldBig);
 	            }
             
 	            if (y > 16 and not collision_point(x, y-16, oSolid, 0, 0) and
@@ -280,20 +280,20 @@ function scrEntityGen() {
 	            {
 	                if (global.cemetary)
 	                {
-	                    if (rand(1,25) == 1) instance_create(x, y-16, oZombie);
-	                    else if (rand(1,160) == 1) instance_create(x, y-16, oVampire);
+	                    if (rand(1,25) == 1) instance_create(x, y-16, oEmeraldBig);
+	                    else if (rand(1,160) == 1) instance_create(x, y-16, oEmeraldBig);
 	                }
 	                else if (not collision_point(x, y-16, oWater, 0, 0))
 	                {
 	                    if (global.blackMarket and (y mod 128 == 0)) n = 0; // to prevent mantraps from spawning near shopkeepers in black market 
 	                    else n = 1;
-	                    if (rand(1,60) == n) instance_create(x, y-16, oManTrap);
+	                    if (rand(1,60) == n) instance_create(x, y-16, oEmeraldBig);
 	                    else if (rand(1,60) == 1) instance_create(x, y-16, oCaveman);
-	                    else if (rand(1,120) == 1) instance_create(x, y-16, oFireFrog);
-	                    else if (rand(1,30) == 1) instance_create(x, y-16, oFrog);
+	                    else if (rand(1,120) == 1) instance_create(x, y-16, oEmeraldBig);
+	                    else if (rand(1,30) == 1) instance_create(x, y-16, oEmeraldBig);
 	                }
-	                else if (rand(1,120) == 1) instance_create(x, y-16, oFireFrog);
-	                else if (rand(1,30) == 1) instance_create(x, y-16, oFrog);
+	                else if (rand(1,120) == 1) instance_create(x, y-16, oEmeraldBig);
+	                else if (rand(1,30) == 1) instance_create(x, y-16, oEmeraldBig);
 	            }
 	        }
         
