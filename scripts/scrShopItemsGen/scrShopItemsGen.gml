@@ -184,7 +184,7 @@ function scrShopItemsGen() {
 	    {
 	        with obj
 	        {
-	            cost += (cost/100)*10*(global.currLevel-2);
+	            cost += 100;
 	            if (shopDesc == "") {
 	                buyMessage = ["A ", string_upper(type), " FOR $", string(cost), "."];
 	            } else {
