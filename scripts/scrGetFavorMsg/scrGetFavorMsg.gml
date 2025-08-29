@@ -31,7 +31,7 @@ function scrGetFavorMsg() {
 	    {
 	        message2 = "YOU FEEL INVIGORATED!";
 	        global.kaliGift += 1;
-	        global.plife += rand(4,8);
+	        global.plife += rand(40,55);
 	    }
 	    else if (global.kaliGift >= 3)
 	    {
@@ -47,7 +47,7 @@ function scrGetFavorMsg() {
 	    {
 	        message2 = "YOU FEEL INVIGORATED!";
 	        global.kaliGift += 1;
-	        global.plife += rand(4,8);
+	        global.plife = 99;
 	    }
 	}
 	else if (global.favor >= 16)
