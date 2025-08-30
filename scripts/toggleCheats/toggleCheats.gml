@@ -1,5 +1,5 @@
 function toggleCheats() {
-	if (global.debugBuild == false) {
+	if (global.debugBuild == true) {
 		global.debugBuild = true;
 		if not instance_exists(oDebug) instance_create(0, 0, oDebug);
 	} else {
