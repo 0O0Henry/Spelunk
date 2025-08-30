@@ -72,7 +72,7 @@ function scrTreasureGen(argument0) {
 	    {
 	        instance_create(x+8, y-8, oChest);
 	    }
-	    else if (not oGame.damsel and rand(1,8) == 1 and not collision_point(x+8, y-8, oWater, 0, 0))
+	    else if (not oGame.damsel and not collision_point(x+8, y-8, oWater, 0, 0))
 	    {
 	        obj = instance_create(x+8, y-8, oDamsel);
 	        obj.cost = 0;
