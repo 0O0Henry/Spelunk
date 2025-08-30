@@ -64,24 +64,24 @@ function scrStealItem() {
 	}
 	else if (holdItem.type == "Bomb Bag")
 	{
-	    global.bombs += 3;
+	    global.bombs = 99;
 	    disp = instance_create(holdItem.x, holdItem.y-14, oItemsGet);
 	    disp.sprite_index = sBombsGet;
 	    with holdItem { instance_destroy(); }
 	    playSound(global.sndPickup);
 	    holdItem = 0;
-	    message1 = "YOU GOT 3 MORE BOMBS!";
+	    message1 = "YOU GOT 99 BOMBS!";
 	    message2 = "";
 	}
 	else if (holdItem.type == "Bomb Box")
 	{
-	    global.bombs += 12;
+	    global.bombs = 99;
 	    disp = instance_create(holdItem.x, holdItem.y-14, oItemsGet);
 	    disp.sprite_index = sBombsGet;
 	    with holdItem { instance_destroy(); }
 	    playSound(global.sndPickup);
 	    holdItem = 0;
-	    message1 = "YOU GOT 12 MORE BOMBS!";
+	    message1 = "YOU GOT 99 BOMBS!";
 	    message2 = "";
 	}
 	else if (holdItem.type == "Paste")
@@ -96,13 +96,13 @@ function scrStealItem() {
 	}
 	else if (holdItem.type == "Rope Pile")
 	{
-	    global.rope += 3;
+	    global.rope = 99;
 	    disp = instance_create(holdItem.x, holdItem.y-15, oItemsGet);
 	    disp.sprite_index = sRopeGet;
 	    with holdItem { instance_destroy(); }
 	    playSound(global.sndPickup);
 	    holdItem = 0;
-	    message1 = "YOU GOT 3 MORE ROPES!";
+	    message1 = "YOU GOT 99 ROPES!";
 	    message2 = "";
 	}
 	else if (holdItem.type == "Parachute")
